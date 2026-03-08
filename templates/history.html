@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicine History</title>
+</head>
+<body>
+<h2>Medicine History</h2>
+<table>
+<tr><th>Medicine</th><th>Dosage</th><th>Time</th><th>Date</th><th>Status</th></tr>
+{% for med in medicines %}
+<tr>
+<td>{{ med.name }}</td>
+<td>{{ med.dosage }}</td>
+<td>{{ med.time }}</td>
+<td>{{ med.date }}</td>
+<td>{{ med.status }}</td>
+</tr>
+{% else %}
+<tr><td colspan="5">No history available</td></tr>
+{% endfor %}
+</table>
+<a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
